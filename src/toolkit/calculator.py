@@ -108,7 +108,7 @@ def calculate(tokens: list[Token])->float:
                 if b == 0:
                     raise Division_By_Zero_Error("Деление на 0")
                 res = a % b
-            else: 
+            else:
                 if b == 0:
                     raise Division_By_Zero_Error("Деление на 0")
                 res = a // b
