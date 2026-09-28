@@ -102,15 +102,15 @@ def calculate(tokens: list[Token])->float:
                 res = a * b
             elif tokens[i] == '/':
                 if b == 0:
-                    raise Division_By_Zero_Error()
+                    raise Division_By_Zero_Error("Деление на 0")
                 res = a / b
             elif tokens[i] == '%':
                 if b == 0:
-                    raise Division_By_Zero_Error()
+                    raise Division_By_Zero_Error("Деление на 0")
                 res = a % b
             else:  # '//'
                 if b == 0:
-                    raise Division_By_Zero_Error()
+                    raise Division_By_Zero_Error("Деление на 0")
                 res = a // b
             tokens[i-1] = res
             del tokens[i:i+2]
