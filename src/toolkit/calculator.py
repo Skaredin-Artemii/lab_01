@@ -37,7 +37,7 @@ def tokenisation(expr:str) -> list[Token]:
             while k < len(expr) and expr[k] == ' ':
                 k += 1
             is_unary = pred is None or pred in '+-*/%'
-            if is_unary and k < len(expr) and (expr[k].isdigit() or expr[k] == '.'):
+            if is_unary and k < len(expr) and expr[k].isdigit() :
                 num = expr[i]
                 i = k
                 while i < len(expr) and (expr[i].isdigit() or expr[i] == '.'):
@@ -57,7 +57,7 @@ def tokenisation(expr:str) -> list[Token]:
             i += 1
             continue
 
-        if expr[i].isdigit() or expr[i] == '.':
+        if expr[i].isdigit():
             num = ''
             while i < len(expr) and (expr[i].isdigit() or expr[i] == '.'):
                 num += expr[i]
